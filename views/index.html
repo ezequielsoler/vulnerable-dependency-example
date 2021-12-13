@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Cross-Site Scripting (XSS)</title>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+</head>
+<body>
+
+	<form id='form' action='/' method='POST'>
+		<input type="text" name="q">
+		<input type="submit" value="Search">
+	</form>
+
+	<div>
+        <div id="term"></div>
+        <ul id="results">
+		</ul>
+    </div>
+	<script src='/static/js/main.js' type='text/javascript'></script>
+</body>
+</html>
